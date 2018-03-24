@@ -1,0 +1,44 @@
+:root {
+  --numix-puter-puter: #2d2d2d;
+  --numix-snapped-nail: #3d3d3d;
+  --numix-falck: #535353;
+  --numix-subway-silver: #dcdcdc;
+  --numix-red: #d64937;
+  --titlesize: 24px;
+  --textsize: 16px;
+}
+
+body {
+  background-color: var(--numix-puter-puter);
+  margin: 30px 80px 30px 80px;
+}
+
+.note {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  resize: none;
+}
+
+.note:focus {
+  outline: none;
+}
+
+hr {
+  border: 1px solid var(--numix-snapped-nail);
+  margin: 8px 0 8px 0;
+}
+
+input#title {
+  color: var(--numix-falck);
+  font-size: var(--titlesize);
+  line-height: var(--titlesize);
+  height: var(--titlesize);
+}
+
+textarea#content {
+  color: var(--numix-subway-silver);
+  font-size: var(--textsize);
+  height: 100vh;
+}
+
