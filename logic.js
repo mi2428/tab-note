@@ -10,11 +10,20 @@ $('#clear-btn').on('click', function(){
   $("#content").val("");
 });
 
-$('#title').on('keydown paste cut', function(){
+$('#save-btn').on('click', function(){
+  const notetitle = $("#title").val();
+  const notecontent = $("#content").val();
+  const storage = {'title': notetitle, 'content': notecontent};
+  chrome.storage.sync.set(storage, () => {
+    $("#is-edited").css("display", "none");
+  });
+});
+
+$('#title').on('change keypress paste cut', function(){
   $("#is-edited").css("display", "inline");
 });
 
-$('#content').on('keydown paste cut', function(){
+$('#content').on('change keypress paste cut', function(){
   $(this).height(this.scrollHeight);
   $("#is-edited").css("display", "inline");
 });
