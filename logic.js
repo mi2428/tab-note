@@ -10,8 +10,13 @@ $('#clear-btn').on('click', function(){
   $("#content").val("");
 });
 
-$('#content').on('change keyup keydown paste cut', function(){
+$('#title').on('keydown paste cut', function(){
+  $("#is-edited").css("display", "inline");
+});
+
+$('#content').on('keydown paste cut', function(){
   $(this).height(this.scrollHeight);
+  $("#is-edited").css("display", "inline");
 });
 
 $(document).keydown((e) => {
@@ -21,7 +26,7 @@ $(document).keydown((e) => {
     const storage = {'title': notetitle, 'content': notecontent};
     e.preventDefault();
     chrome.storage.sync.set(storage, () => {
-      console.log("Note saved!");
+      $("#is-edited").css("display", "none");
     });
   }
 });

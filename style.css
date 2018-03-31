@@ -30,6 +30,13 @@ hr {
   margin: 8px 0 8px 0;
 }
 
+span.vr {
+  display: inline;
+  height: 100%;
+  margin: 0 5px 0 5px;
+  border: 1px solid var(--numix-snapped-nail);
+}
+
 p#btn-panel {
   display: block;
   height: var(--btnsize);
@@ -63,7 +70,7 @@ input#title {
 textarea#content {
   color: var(--numix-subway-silver);
   font-size: var(--textsize);
-  height: calc(100vh - 30px - 24px - 18px -14px);
+  height: calc(100vh - 30px - 24px - 18px - 14px);
   padding: 0;
 }
 
