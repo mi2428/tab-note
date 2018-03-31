@@ -6,6 +6,7 @@
   --numix-red: #d64937;
   --titlesize: 24px;
   --textsize: 16px;
+  --btnsize: 14px;
 }
 
 body {
@@ -29,6 +30,25 @@ hr {
   margin: 8px 0 8px 0;
 }
 
+p#btn-panel {
+  display: block;
+  height: var(--btnsize);
+  margin: 0;
+  text-align: right;
+}
+
+.btn {
+  color: var(--numix-falck);
+  font-size: var(--btnsize);
+  line-height: var(--btnsize);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn:hover {
+  color: var(--numix-red);
+}
+
 input#title {
   color: var(--numix-falck);
   font-size: var(--titlesize);
@@ -36,10 +56,14 @@ input#title {
   height: var(--titlesize);
 }
 
+::-webkit-input-placeholder {
+  color: var(--numix-falck);
+}
+
 textarea#content {
   color: var(--numix-subway-silver);
   font-size: var(--textsize);
-  height: calc(100vh - 30px - 24px - 18px);
+  height: calc(100vh - 30px - 24px - 18px -14px);
   padding: 0;
 }
 
